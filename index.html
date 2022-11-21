@@ -24,14 +24,33 @@
 				theme: {
 					extend: {
 						fontSize: {
-							base: ['15px', '24px'],
+							base: ['14px', '24px'],
 						},
-						fontFamily: {},
-						colors: {},
+						fontFamily: {
+							Montserrat: 'Montserrat',
+							Fraunces: 'Fraunces',
+						},
+						colors: {
+							Cream: '#f2ebe3',
+							DarkCyan: '#3c8067',
+						},
 					},
 				},
 			};
 		</script>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap"
+			rel="stylesheet"
+		/>
 		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
 		<style>
 			.attribution {
@@ -43,30 +62,51 @@
 			}
 		</style>
 	</head>
-	<body>
-		<main>
+	<body class="bg-[#f2ebe3] font-Montserrat">
+		<main class="m-5 rounded-2xl min-h-screen text-sm">
 			<div id="image">
 				<img
-					src=""
-					alt=""
+					src="images/image-product-mobile.jpg"
+					alt="Perfume Bottle"
+					class="rounded-t-xl"
 				/>
 			</div>
-			<div id="info">
-				<h2>Perfume</h2>
-				<h1>Gabrielle Essence Eau De Parfum</h1>
-				<p>
+			<div
+				id="info"
+				class="rounded-b-xl p-5 text-xl bg-white"
+			>
+				<h2 class="text-gray-300 tracking-[.35em] uppercase">Perfume</h2>
+				<h1 class="font-Fraunces text-3xl font-bold mt-3">
+					Gabrielle Essence Eau De Parfum
+				</h1>
+				<p class="mt-3 text-base">
 					A floral, solar and voluptuous interpretation composed by Olivier Polge,
 					Perfumer-Creator for the House of CHANEL.
 				</p>
-				<div>
-					<p>$149.99</p>
-					<p>$169.99</p>
+				<div class="flex items-center mt-5 text-[#3c8067]">
+					<p class="text-3xl font-DarkCyan font-bold">$149.99</p>
+					<p class="line-through ml-5 text-sm">$169.99</p>
 				</div>
-				<button>Add to Cart</button>
+				<button
+					class="mt-5 bg-[#3c8067] flex items-center justify-center text-white rounded w-full py-2"
+				>
+					<svg
+						width="15"
+						height="16"
+						xmlns="http://www.w3.org/2000/svg"
+						class="mr-2"
+					>
+						<path
+							d="M14.383 10.388a2.397 2.397 0 0 0-1.518-2.222l1.494-5.593a.8.8 0 0 0-.144-.695.8.8 0 0 0-.631-.28H2.637L2.373.591A.8.8 0 0 0 1.598 0H0v1.598h.983l1.982 7.4a.8.8 0 0 0 .799.59h8.222a.8.8 0 0 1 0 1.599H1.598a.8.8 0 1 0 0 1.598h.943a2.397 2.397 0 1 0 4.507 0h1.885a2.397 2.397 0 1 0 4.331-.376 2.397 2.397 0 0 0 1.12-2.021ZM11.26 7.99H4.395L3.068 3.196h9.477L11.26 7.991Zm-6.465 6.392a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Zm6.393 0a.8.8 0 1 1 0-1.598.8.8 0 0 1 0 1.598Z"
+							fill="#FFF"
+						/>
+					</svg>
+					Add to Cart
+				</button>
 			</div>
 		</main>
 
-		<footer>
+		<footer class="-mt-16">
 			<div class="attribution">
 				Challenge by
 				<a
